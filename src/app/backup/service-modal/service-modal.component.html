@@ -1,0 +1,28 @@
+
+
+
+<ion-toolbar>
+
+  <ion-buttons slot="end">
+    <ion-button (click)="closeModal()">Close</ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+<div class="container" style="
+display: flex;
+justify-content: center;
+align-items: center">
+  <div class="image-container">
+    <img style="height: 200px; width: 200px;" src="./assets/Justice-cuate.svg" alt="">
+  </div>
+</div>
+
+   
+
+
+<p style="font-weight: bold; margin-bottom: 2px; padding-left: 20px;">{{ service.service_name }}</p>
+<p style="padding-left: 20px;"> {{ service.description }}</p>
+  
+
+</ion-content>

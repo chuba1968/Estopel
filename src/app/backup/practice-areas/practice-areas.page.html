@@ -1,0 +1,37 @@
+
+<ion-content [fullscreen]="true">
+
+  <div class="backgr" >
+
+    <ion-icon slot="icon-only" name="chevron-back" [routerLink]="['/']" routerLinkActive="router-link-active"></ion-icon>
+
+
+
+</div>
+
+
+
+
+
+
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterServices()" placeholder="Search Services"></ion-searchbar>
+
+
+  <ion-list *ngIf="filteredServices && filteredServices.length > 0">
+    <ion-item detail="true" *ngFor="let service of filteredServices" (click)="openModal(service)">
+      <ion-label>
+        <h3>{{ service.service_name }}</h3>
+        <p>{{ service.description.slice(0, 50) }}...</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-text *ngIf="!filteredServices || filteredServices.length === 0" class="ion-text-center">No matching Services.</ion-text>
+
+
+</ion-content>
+
+
+
+

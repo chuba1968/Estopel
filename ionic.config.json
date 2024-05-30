@@ -1,0 +1,7 @@
+{
+  "name": "Estoppel Attorneys",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
